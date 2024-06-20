@@ -4,6 +4,8 @@ import { AppBar, Toolbar, Container } from '@mui/material';
 import logo from './logo.svg';
 import './App.css';
 import AlbumOverview from './components/AlbumOverview';
+import AlbumDetail from './components/AlbumDetail';
+import CreateAlbum from './components/CreateAlbum';
 
 function App() {
   return (
@@ -12,33 +14,20 @@ function App() {
         <AppBar position="static">
           <Toolbar>
             <Link to="/">
-              My app
+              |My app|
+            </Link>
+            <Link to="/AlbumOverview">
+              |Album Overview|
             </Link>
           </Toolbar>
         </AppBar>
         <Container>
-        <Routes>
-        
+          <Routes>
+            <Route path="/album/:id" element={<AlbumDetail />} />
             <Route path="/AlbumOverview" element={<AlbumOverview />} />
+            <Route path="/new" element={<CreateAlbum />} />
           </Routes>
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-            <Link to="/AlbumOverview">
-              To album Overview
-            </Link>
-          </header>
+         
         </Container>
       </div>
     </Router>
