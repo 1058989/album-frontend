@@ -22,7 +22,7 @@ const useAlbum = (id) => {
                 console.log(apiResult);
                 setAlbums(apiResult);
             });
-    }, []);
+    }, [endpoint]);
 
     return albums;
 };

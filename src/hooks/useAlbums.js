@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const endpoint = `${process.env.REACT_APP_API_URL}/albums`;
-console.log("hey endpoint:" + endpoint);
+console.log("hey endpoitnt:" + endpoint);
 const useAlbums = () => {
   const [albums, setAlbums] = useState([]);
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Container } from '@mui/material';
-import logo from './logo.svg';
 import './App.css';
 import AlbumOverview from './components/AlbumOverview';
 import AlbumDetail from './components/AlbumDetail';
